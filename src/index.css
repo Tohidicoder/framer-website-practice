@@ -151,3 +151,25 @@ input {
     animation: none !important;
   }
 }
+
+@keyframes blogFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-page-enter {
+  animation: blogFadeUp 0.55s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-page-enter {
+    animation: none;
+  }
+}
